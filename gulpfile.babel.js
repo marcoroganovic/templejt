@@ -17,18 +17,18 @@ gulp.task("compile", () => {
   return browserify("src/main.js")
     .transform("babelify")
     .bundle()
-    .pipe(source("async-request.js"))
+    .pipe(source("templejt.js"))
     .pipe(gulp.dest("dist"))
 });
 
 
 gulp.task("minify", () => {
   pump([
-    gulp.src("dist/async-request.js"),
+    gulp.src("dist/templejt.js"),
     uglify(), 
     rename({
       dirname: "dist/",
-      basename: "async-request.min",
+      basename: "templejt.min",
       extname: ".js"
     }),
     gulp.dest(".")
