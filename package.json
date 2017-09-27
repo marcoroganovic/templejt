@@ -1,0 +1,31 @@
+{
+  "name": "templejt",
+  "version": "0.0.1",
+  "description": "Mini JavaScript templating engine",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "template",
+    "templating",
+    "view",
+    "render"
+  ],
+  "author": "Marco Roganovic <marcoroganovic@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-dest": "^0.2.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "pum": "0.0.6",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
