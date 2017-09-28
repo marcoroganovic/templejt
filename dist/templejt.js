@@ -29,7 +29,8 @@ isFunction = isFunction;exports.
 isUndefined = isUndefined;
 
 },{}],5:[function(require,module,exports){
-"use strict";Object.defineProperty(exports, "__esModule", { value: true });var _templejt = require("./templejt");var _templejt2 = _interopRequireDefault(_templejt);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default = _templejt2.default;
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });var _templejt = require("./templejt");var _templejt2 = _interopRequireDefault(_templejt);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+window.templejt = _templejt2.default;exports.default = _templejt2.default;
 
 },{"./templejt":7}],6:[function(require,module,exports){
 "use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = makeElement = function makeElement(tag) {return document.createElement(tag);};
