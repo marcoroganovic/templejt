@@ -1,3 +1,5 @@
 import templejt from "./templejt";
-window.templejt = templejt;
+import render from "./render";
+window.render = render;
+window.templejt = templejt; 
 export default templejt;
