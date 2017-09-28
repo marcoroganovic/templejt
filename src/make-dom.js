@@ -1,6 +1,7 @@
 import makeFragment from "./make-fragment";
 import makeElement from "./make-element";
-export default const makeDOM = str => {
+
+export default makeDOM = str => {
   const fragment = makeFragment();
   const placeholder = makeElement("div");
   placeholder.innerHTML = str;
