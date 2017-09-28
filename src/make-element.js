@@ -1,1 +1,1 @@
-export default const makeElement = tag => document.createElement(tag);
+export default makeElement = tag => document.createElement(tag);

@@ -2,7 +2,8 @@ import { isObject, isArray } from "./is";
 import makeDOM from "./make-dom";
 import constructRegex from "./construct-regex";
 
-export default const interpolate = (tmpl, data, asString) => {
+export default interpolate = (tmpl, data, asString) => {
+
   if(isObject(data) && !isArray(data)) {
     for(let prop in data) {
       let regex = constructRegex(prop);
