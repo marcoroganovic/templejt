@@ -29,13 +29,24 @@ isFunction = isFunction;exports.
 isUndefined = isUndefined;
 
 },{}],5:[function(require,module,exports){
-"use strict";Object.defineProperty(exports, "__esModule", { value: true });var _templejt = require("./templejt");var _templejt2 = _interopRequireDefault(_templejt);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });var _templejt = require("./templejt");var _templejt2 = _interopRequireDefault(_templejt);
+var _render = require("./render");var _render2 = _interopRequireDefault(_render);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+window.render = _render2.default;
 window.templejt = _templejt2.default;exports.default = _templejt2.default;
 
-},{"./templejt":7}],6:[function(require,module,exports){
+},{"./render":7,"./templejt":8}],6:[function(require,module,exports){
 "use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = makeElement = function makeElement(tag) {return document.createElement(tag);};
 
 },{}],7:[function(require,module,exports){
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });var _is = require("./is");exports.default =
+
+render = function render(node, target) {
+  if ((0, _is.isString)(target))
+  target.document.querySelector(target);
+  target.appendChild(node);
+};
+
+},{"./is":4}],8:[function(require,module,exports){
 "use strict";Object.defineProperty(exports, "__esModule", { value: true });var _makeElement = require("./make-element");var _makeElement2 = _interopRequireDefault(_makeElement);
 var _getAllNodes = require("./get-all-nodes");var _getAllNodes2 = _interopRequireDefault(_getAllNodes);
 var _findIfConditions = require("./find-if-conditions");var _findIfConditions2 = _interopRequireDefault(_findIfConditions);
