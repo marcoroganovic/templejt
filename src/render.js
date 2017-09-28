@@ -1,5 +1,6 @@
+import { isString } from "./is";
 export default const render = (node, target) => {
-  if(typeof target === "string") {
+  if(isString(target)) {
     target.document.querySelector(target);
   }
 
