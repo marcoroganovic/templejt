@@ -65,13 +65,12 @@ var _render = require("./render");var _render2 = _interopRequireDefault(_render)
 window.render = _render2.default;
 window.templejt = _templejt2.default;exports.default = _templejt2.default;
 
-},{"./render":11,"./templejt":12}],8:[function(require,module,exports){
-"use strict";Object.defineProperty(exports, "__esModule", { value: true });var _makeFragment = require("./make-fragment");var _makeFragment2 = _interopRequireDefault(_makeFragment);
-var _makeElement = require("./make-element");var _makeElement2 = _interopRequireDefault(_makeElement);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+},{"./render":10,"./templejt":11}],8:[function(require,module,exports){
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });var _makeFragment = require("./make-fragment");var _makeFragment2 = _interopRequireDefault(_makeFragment);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
 
 makeDOM = function makeDOM(str) {
   var fragment = (0, _makeFragment2.default)();
-  var placeholder = (0, _makeElement2.default)("div");
+  var placeholder = document.createElement("div");
   placeholder.innerHTML = str;
   var current = void 0;
 
@@ -82,13 +81,10 @@ makeDOM = function makeDOM(str) {
   return fragment;
 };
 
-},{"./make-element":9,"./make-fragment":10}],9:[function(require,module,exports){
-"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = makeElement = function makeElement(tag) {return document.createElement(tag);};
-
-},{}],10:[function(require,module,exports){
+},{"./make-fragment":9}],9:[function(require,module,exports){
 "use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = makeFragment = function makeFragment() {return document.createDocumentFragment();};
 
-},{}],11:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";Object.defineProperty(exports, "__esModule", { value: true });var _is = require("./is");exports.default =
 
 render = function render(node, target) {
@@ -97,16 +93,15 @@ render = function render(node, target) {
   target.appendChild(node);
 };
 
-},{"./is":6}],12:[function(require,module,exports){
+},{"./is":6}],11:[function(require,module,exports){
 "use strict";Object.defineProperty(exports, "__esModule", { value: true });var _is = require("./is");
-var _makeElement = require("./make-element");var _makeElement2 = _interopRequireDefault(_makeElement);
 var _getAllNodes = require("./get-all-nodes");var _getAllNodes2 = _interopRequireDefault(_getAllNodes);
 var _findIfConditions = require("./find-if-conditions");var _findIfConditions2 = _interopRequireDefault(_findIfConditions);
 var _findLoops = require("./find-loops");var _findLoops2 = _interopRequireDefault(_findLoops);
 var _interpolate = require("./interpolate");var _interpolate2 = _interopRequireDefault(_interpolate);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
 
 templejt = function templejt(str, data) {
-  var fragment = (0, _makeElement2.default)("div");
+  var fragment = document.createElement("div");
   fragment.innerHTML = str;
   var allNodes = (0, _getAllNodes2.default)(fragment);
   var ifConditions = (0, _findIfConditions2.default)(allNodes);
@@ -141,4 +136,4 @@ templejt = function templejt(str, data) {
   return (0, _interpolate2.default)(fragment.innerHTML, data);
 };
 
-},{"./find-if-conditions":2,"./find-loops":3,"./get-all-nodes":4,"./interpolate":5,"./is":6,"./make-element":9}]},{},[7]);
+},{"./find-if-conditions":2,"./find-loops":3,"./get-all-nodes":4,"./interpolate":5,"./is":6}]},{},[7]);
