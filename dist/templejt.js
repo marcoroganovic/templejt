@@ -106,7 +106,8 @@ var _findLoops = require("./find-loops");var _findLoops2 = _interopRequireDefaul
 var _interpolate = require("./interpolate");var _interpolate2 = _interopRequireDefault(_interpolate);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
 
 templejt = function templejt(str, data) {
-  var fragment = (0, _makeElement2.default)("div").innerHTML = str;
+  var fragment = (0, _makeElement2.default)("div");
+  fragment.innerHTML = str;
   var allNodes = (0, _getAllNodes2.default)(fragment);
   var ifConditions = (0, _findIfConditions2.default)(allNodes);
   var loops = (0, _findLoops2.default)(allNodes);

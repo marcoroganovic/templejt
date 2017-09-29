@@ -6,7 +6,8 @@ import findLoops from "./find-loops";
 import interpolate from "./interpolate";
 
 export default templejt = (str, data) => {
-  const fragment = makeElement("div").innerHTML = str;
+  const fragment = makeElement("div");
+  fragment.innerHTML = str;
   const allNodes = getAllNodes(fragment);
   const ifConditions = findIfConditions(allNodes);
   const loops = findLoops(allNodes);
