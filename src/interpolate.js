@@ -2,7 +2,7 @@ import { isObject, isArray } from "./is";
 import makeDOM from "./make-dom";
 import constructRegex from "./construct-regex";
 
-export default (tmpl, data, asString) => {
+function interpolate(tmpl, data, asString) {
 
   if(isObject(data) && !isArray(data)) {
     for(let prop in data) {
@@ -24,3 +24,5 @@ export default (tmpl, data, asString) => {
 
   return tmpl;
 }
+
+export default interpolate;
