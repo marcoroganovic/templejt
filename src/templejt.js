@@ -1,8 +1,9 @@
+import { isFunction } from "./is";
 import makeElement from "./make-element";
 import getAllNodes from "./get-all-nodes";
 import findIfConditions from "./find-if-conditions";
 import findLoops from "./find-loops";
-import { isFunction } from "./is";
+import interpolate from "./interpolate";
 
 export default templejt = (str, data) => {
   const fragment = makeElement("div").innerHTML = str;
