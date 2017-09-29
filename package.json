@@ -1,6 +1,6 @@
 {
   "name": "templejt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Mini JavaScript templating engine",
   "main": "src/main.js",
   "scripts": {
