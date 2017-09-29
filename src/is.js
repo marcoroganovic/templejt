@@ -1,3 +1,9 @@
+/**
+ * It returns function for type checking based on provided type in first call
+ * @param {String} type
+ * @return {Function}
+ *
+ **/
 const isType = type => arg => typeof arg === type;
 const isString = isType("string");
 const isNumber = isType("number");

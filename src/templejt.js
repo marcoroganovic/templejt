@@ -1,11 +1,20 @@
 import { isFunction } from "./is";
+import makeElement from "./make-element";
 import getAllNodes from "./get-all-nodes";
 import findIfConditions from "./find-if-conditions";
 import findLoops from "./find-loops";
 import interpolate from "./interpolate";
 
+/**
+ * Creates DocumentFragment from string with all interpolated values 
+ * based on provided data
+ * @param {String} str
+ * @param {Object} data
+ * @return {DocumentFragment}
+ *
+ **/
 export default (str, data) => {
-  const fragment = document.createElement("div");
+  const fragment = makeElement("div");
   fragment.innerHTML = str;
   const allNodes = getAllNodes(fragment);
   const ifConditions = findIfConditions(allNodes);

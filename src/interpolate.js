@@ -2,6 +2,15 @@ import { isObject, isArray } from "./is";
 import makeDOM from "./make-dom";
 import constructRegex from "./construct-regex";
 
+/**
+ * Interpolates template with values from data using Regex
+ * and it return either DOM fragment or string based on asString argument
+ * @param {String} tmpl
+ * @param {Object|Array} data
+ * @param {Boolean} asString
+ * @return {DOMFragment|String}
+ *
+ **/
 function interpolate(tmpl, data, asString) {
 
   if(isObject(data) && !isArray(data)) {
