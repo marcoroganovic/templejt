@@ -4,7 +4,7 @@ import findIfConditions from "./find-if-conditions";
 import findLoops from "./find-loops";
 import interpolate from "./interpolate";
 
-export default templejt = (str, data) => {
+export default (str, data) => {
   const fragment = document.createElement("div");
   fragment.innerHTML = str;
   const allNodes = getAllNodes(fragment);

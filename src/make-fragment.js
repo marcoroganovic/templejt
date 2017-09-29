@@ -1,1 +1,1 @@
-export default makeFragment = () => document.createDocumentFragment();
+export default () => document.createDocumentFragment();

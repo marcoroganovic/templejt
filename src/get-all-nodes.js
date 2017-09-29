@@ -1,1 +1,1 @@
-export default getAllNodes = dom => Array.from(dom.querySelectorAll("*"));
+export default (dom) => Array.from(dom.querySelectorAll("*"));

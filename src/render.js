@@ -1,6 +1,6 @@
 import { isString } from "./is";
 
-export default render = (node, target) => {
+export default (node, target) => {
   if(isString(target)) 
     target.document.querySelector(target);
   target.appendChild(node);
