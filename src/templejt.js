@@ -33,7 +33,7 @@ export default (str, data) => {
       );
 
       let prop = data[attribute];
-      node.appendChild(interpolate(innerHTML, prop));
+      node.appendChild(interpolate(template, prop));
     });
   }
 
