@@ -42,7 +42,6 @@ let placeholderTemplate = `
   </div>
   <footer></footer>
 `;
-```
 
 let data = {
   loggedIn: true
