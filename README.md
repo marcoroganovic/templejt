@@ -21,10 +21,85 @@ let userTemplate = `
   <img src="{{ avatarURL }}" alt="{{ name }}" />
 `;
 
-templejt(userTemplate, {
-  name: "Jonh",
+
+let userData = {
+  name: "John",
   lastName: "Doe",
   username: "doejohn",
   avatarURL: "https://gravatar.com/someplaceholder.jpg"
-});
+};
+
+templejt(userTemplate, userData);
+```
+2. Conditinal rendering
+```javascript
+let placeholderTemplate = `
+  <header></header>
+  <div data-if="loggedIn">
+    <div class="dashboard-content">
+      <img src="somesecretpicture.jpg" />
+    </div>
+  </div>
+  <footer></footer>
+`;
+```
+
+let data = {
+  loggedIn: true
+}
+
+templejt(placeholderTemplate, data);
+```
+
+3. Computed properties
+let simpleTemplate = `
+  <div class="user">
+    <h1>{{ formattedName }}</h1>
+  </div>
+`;
+
+let data = {
+  name: "jonh",
+  lastName: "joe",
+  formattedName: function() {
+    return this.name.toUpperCase() + " " + this.lastName.toUpperCase();
+  }
+}
+
+templejt(simpleTemplate, data);
+```
+
+4. Looping
+```javascript
+let userListTemplate = `
+  <ul data-for="users">
+    <li>
+      <img class="avatar" src="{{ avatarURL }}" alt="{{ name }}" />
+      <p class="full-name">Name: {{ name }}</h3>
+      <p class="username">{{ username }}</p>
+    </li>"
+  </ul>
+`;
+
+let data = {
+  users: [
+    { 
+      name: "Paul Irish", 
+      username: "paulirish", 
+      avatarURL: "..." 
+    },
+    { 
+      name: "Addy Osmany",
+      username: "addyosmani",
+      avatarURL: "..."
+    },
+    {
+      name: "Nicolas Zakas",
+      username: "nzakas",
+      avatarURL: "..."
+    }
+  ];
+};
+
+templejt(userListTemplate, data);
 ```
