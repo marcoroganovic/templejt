@@ -5,7 +5,7 @@
  *
  **/
 export default (nodes) => nodes.filter(node => {
-  let parent = node.parent);
+  let parent = node.parent;
   return node.hasAttribute("data-if") && (
     !parent.hasAttribute("data-for") || !parent.hasAttribute("data-context")
   )
