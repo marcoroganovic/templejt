@@ -14,7 +14,12 @@ function (prop) {return new RegExp("{{\\s*?" + prop + "\\s*?}}", "g");};
                                                                              * @return {Array}
                                                                              *
                                                                              **/exports.default =
-function (nodes) {return nodes.filter(function (node) {return node.hasAttribute("data-if");});};
+function (nodes) {return nodes.filter(function (node) {
+    var parent = node.parent;
+    return node.hasAttribute("data-if") && (
+    !parent.hasAttribute("data-for") || !parent.hasAttribute("data-context"));
+
+  });};
 
 },{}],3:[function(require,module,exports){
 "use strict";Object.defineProperty(exports, "__esModule", { value: true }); /**
