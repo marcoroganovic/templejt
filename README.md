@@ -13,7 +13,7 @@ object provided as context will be evaluated before interpolating.
 
 ### Demo usage
 
-1. Simple interpolation
+**1. Simple interpolation**
 ```javascript
 let userTemplate = `
   <h1>{{ name }} { lastName }}</h1>
@@ -31,7 +31,10 @@ let userData = {
 
 templejt(userTemplate, userData);
 ```
-2. Conditinal rendering
+
+___
+
+**2. Conditinal rendering**
 ```javascript
 let placeholderTemplate = `
   <header></header>
@@ -50,7 +53,9 @@ let data = {
 templejt(placeholderTemplate, data);
 ```
 
-3. Computed properties
+___
+
+**3. Computed properties**
 ```javascript
 let simpleTemplate = `
   <div class="user">
@@ -69,7 +74,9 @@ let data = {
 templejt(simpleTemplate, data);
 ```
 
-4. Looping
+___
+
+**4. Looping**
 ```javascript
 let userListTemplate = `
   <ul data-for="users">
