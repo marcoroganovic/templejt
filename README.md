@@ -52,6 +52,7 @@ templejt(placeholderTemplate, data);
 ```
 
 3. Computed properties
+```javascript
 let simpleTemplate = `
   <div class="user">
     <h1>{{ formattedName }}</h1>
